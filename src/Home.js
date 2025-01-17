@@ -1,6 +1,7 @@
 // LandingPage.js
 import React from "react";
 import "./Home.css"; // We'll move the style rules to a separate file (recommended)
+import Reviews from "./Reviews";
 
 function LandingPage() {
   const currentYear = new Date().getFullYear();
@@ -13,6 +14,7 @@ function LandingPage() {
           <a href="#about">About Us</a>
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>
+          <a href="#Reviews">Reviews</a>
         </nav>
       </header>
 
@@ -49,6 +51,11 @@ function LandingPage() {
             commitment to excellence and attention to detail ensure that every
             job is completed on time and within budget.
           </p>
+        </section>
+
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <Reviews/>
         </section>
 
         <section id="contact">
