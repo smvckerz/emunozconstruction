@@ -29,7 +29,7 @@ body {
   }
   
   .hero {
-    background: url('hero-construction.jpg') no-repeat center center/cover;
+    background: white;
     min-height: 60vh;
     display: flex;
     align-items: center;
