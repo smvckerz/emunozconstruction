@@ -21,7 +21,7 @@ function Reviews() {
 
     try {
       // POST to your Node backend
-      const response = await fetch("http://192.168.1.175:6000/api/reviews", {
+      const response = await fetch("/api/reviews", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function Reviews() {
 
   // Fetch existing reviews on mount
   useEffect(() => {
-    fetch("http://192.168.1.175:6000/api/reviews")
+    fetch("/api/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data))
       .catch((err) => console.error("Error:", err));
