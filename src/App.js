@@ -1,23 +1,21 @@
-// import React from "react";
-// import Home from "./Home";
-
-// function App() {
-//   return <Home />;
-// }
-
-// export default App;
-
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import Reviews from "./Reviews"; // the new component
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import LandingPage from "./LandingPage";   // your home
+import Reviews from "./Reviews";           // your reviews page
 
 function App() {
   return (
     <Router>
+      {/* Nav at the top with links */}
+      <nav style={{ background: "#eee", padding: "1rem" }}>
+        <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
+        <Link to="/reviews">Reviews</Link>
+      </nav>
+
+      {/* Define routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
     </Router>
