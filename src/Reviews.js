@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import StarRating from "./StarRating"; // We'll define a StarRating component next
-import "./Reviews.css"; // Optional styling
+import React, { useState, useEffect } from "react";
+import StarRating from "./StarRating";
+import "./Reviews.css";
 
 function Reviews() {
   // Keep an array of all reviews in state
@@ -16,7 +16,7 @@ function Reviews() {
     const newReview = {
       text: reviewText,
       rating: rating,
-      date: new Date().toLocaleString(),  // optionally store date here
+      date: new Date().toLocaleString(),
     };
 
     try {
@@ -24,26 +24,33 @@ function Reviews() {
       const response = await fetch("http://192.168.1.175:6000/api/reviews", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(newReview)
+        body: JSON.stringify(newReview),
       });
       if (!response.ok) {
         throw new Error("Failed to add review");
       }
       const createdReview = await response.json();
 
-      // Optionally update local state with the newly created review
+      // Update local state with the newly created review
       setReviews([...reviews, createdReview]);
 
       // Reset form
       setReviewText("");
       setRating(0);
-
     } catch (error) {
       console.error("Error submitting review:", error);
     }
   };
+
+  // Fetch existing reviews on mount
+  useEffect(() => {
+    fetch("http://192.168.1.175:6000/api/reviews")
+      .then((res) => res.json())
+      .then((data) => setReviews(data))
+      .catch((err) => console.error("Error:", err));
+  }, []);
 
   return (
     <div className="reviews-container">
@@ -71,7 +78,6 @@ function Reviews() {
           <li key={index} className="review-item">
             <div className="review-rating">
               {"★".repeat(r.rating) + "☆".repeat(5 - r.rating)}
-              {/* e.g. if r.rating=3 => "★★★☆☆" */}
             </div>
             <p className="review-text">{r.text}</p>
             <p className="review-date">{r.date}</p>
