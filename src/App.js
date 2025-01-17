@@ -1,7 +1,7 @@
 // src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import LandingPage from "./LandingPage";   // your home
+import Home from "./Home";   // your home
 import Reviews from "./Reviews";           // your reviews page
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 
       {/* Define routes */}
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
     </Router>
