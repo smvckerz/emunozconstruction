@@ -1,7 +1,7 @@
 // App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import LandingPage from "./LandingPage";
+import Home from "./Home";
 import Reviews from "./Reviews";
 import "./App.css"; // optional styling
 
@@ -20,7 +20,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
     </Router>
