@@ -1,15 +1,22 @@
 import React from "react";
-import "./Home.css"; 
+import "./Home.css";
 
 function About() {
-  return (
-    <div>
-      <h1>About Section</h1>
-      <p>This is where you’d put info about your company or page.</p>
-      {/* Maybe you want to render the <Reviews /> component here? */}
-      <Reviews />
-    </div>
-  );
+    return (
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                At E. Munoz Construction, I bring 25 years of experience to your
+                residential project. We’re a family-owned
+                business dedicated to quality, integrity, and customer satisfaction.
+            </p>
+            <p>
+                Our team of skilled professionals will work with you at every
+                step—from the initial design to the final walkthrough—to ensure your
+                vision becomes a reality.
+            </p>
+        </section>
+    );
 }
 
 export default About;
