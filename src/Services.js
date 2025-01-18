@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 
-function About() {
+function Services() {
     return (
         <div>
             <section id="services">
@@ -23,4 +23,4 @@ function About() {
     );
 }
 
-export default About;
+export default Services;
