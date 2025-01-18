@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import LandingPage from "./LandingPage";
+import Home from "./Home";
 import About from "./About";
 import Services from "./Services";
 import Reviews from "./Reviews";
@@ -20,7 +20,7 @@ function App() {
       </header>
 
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/reviews" element={<Reviews />} />
