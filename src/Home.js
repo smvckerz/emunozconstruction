@@ -85,7 +85,7 @@
 import React from "react";
 import "./Home.css";
 
-function LandingPage() {
+function Home() {
   return (
     <>
       <div className="hero">
@@ -96,4 +96,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default Home;
