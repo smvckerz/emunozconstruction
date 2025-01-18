@@ -1,21 +1,26 @@
-// src/App.js
+// App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";   // your home
-import Reviews from "./Reviews";           // your reviews page
+import LandingPage from "./LandingPage";
+import Reviews from "./Reviews";
+import "./App.css"; // optional styling
 
 function App() {
   return (
     <Router>
-      {/* Nav at the top with links */}
-      <nav style={{ background: "#eee", padding: "1rem" }}>
-        <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
-        <Link to="/reviews">Reviews</Link>
-      </nav>
+      <header className="main-header">
+        <h2>E. Munoz Construction</h2>
+        <nav>
+          <Link to="/">Home</Link>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+          <Link to="/reviews">Reviews</Link>
+        </nav>
+      </header>
 
-      {/* Define routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
     </Router>

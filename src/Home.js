@@ -8,7 +8,7 @@ function LandingPage() {
 
   return (
     <>
-      <header>
+      {/* <header>
         <h2>E. Munoz Construction</h2>
         <nav>
           <a href="#about">About Us</a>
@@ -16,7 +16,7 @@ function LandingPage() {
           <a href="#contact">Contact</a>
           <a href="#Reviews">Reviews</a>
         </nav>
-      </header>
+      </header> */}
 
       <div className="hero">
         <h1>Building Your Future, One Project at a Time</h1>
@@ -26,8 +26,8 @@ function LandingPage() {
         <section id="about">
           <h2>About Us</h2>
           <p>
-            At E. Munoz Construction, we bring decades of experience to your
-            residential or commercial construction project. We’re a family-owned
+            At E. Munoz Construction, I bring 25 years of experience to your
+            residential project. We’re a family-owned
             business dedicated to quality, integrity, and customer satisfaction.
           </p>
           <p>
@@ -65,10 +65,7 @@ function LandingPage() {
             <strong>Email:</strong> info@emunozconstruction.com
           </p>
           <p>
-            <strong>Phone:</strong> (555) 123-4567
-          </p>
-          <p>
-            <strong>Address:</strong> 123 Main Street, Hometown, USA
+            <strong>Phone (Preferably):</strong> (415) 261-1895
           </p>
         </section>
       </main>
